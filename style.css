@@ -6,7 +6,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
    -webkit-perspective: 200px; /* Safari 4-8  */
-    perspective: 200px;
+	perspective: 200px;
+	perspective-origin: center;
 }
 .flip_card {
   position: relative;
