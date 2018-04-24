@@ -59,21 +59,22 @@
     animation-play-state: paused;
 }
 @-webkit-keyframes preloader {
-    to { -webkit-transform: rotateY(360deg); }
+    100% {-webkit-transform: scale(1.3) rotateY(360deg); }
 }
 
 @-moz-keyframes preloader {
-    to { -moz-transform: rotateY(360deg); }
+    100% {-moz-transform: scale(1.3) rotateY(360deg); }
+
 }
 
 @-ms-keyframes preloader {
-    to { -ms-transform: rotateY(360deg); }
+    100% {-ms-transform: scale(1.3) rotateY(360deg); }
 }
 
 @-o-keyframes preloader {
-    to { -o-transform: rotateY(360deg); }
+    100% {-o-transform: scale(1.3) rotateY(360deg); }
 }
 
 @keyframes preloader {
-    to { transform: rotateY(360deg); }
+    100% { transform: scale(1.3) rotateY(360deg); }
 }
