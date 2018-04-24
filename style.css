@@ -27,7 +27,7 @@
     border-radius: 10px;
    backface-visibility: hidden;
     overflow: hidden;
-    background: url('coin_1.png');
+    background: url('coin_1_new.png');
     background-size: cover;
     transform: translateZ(-1px);
 }
@@ -40,7 +40,7 @@
     border-radius: 10px;
     backface-visibility: hidden;
     overflow: hidden;
-    background: url(coin_2.png);
+    background: url('coin_2_new.png');
     background-size: cover;
     transform: rotateY(180deg) translateZ(2px);
 }
