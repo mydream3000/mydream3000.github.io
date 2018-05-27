@@ -635,7 +635,7 @@
 
 	.tiltview {
 		left: 0;
-		opacity: 0.3;
+		opacity: 1;
 		pointer-events: none;
 	}
 }
@@ -658,8 +658,11 @@
 	}
 
 	.description {
-		font-size: 1em;
-		padding: 1.4em;
+	font-size: 0.5em;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 	}
 
 	.no-csstransforms3d .tiltview.col,
