@@ -1,20 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class='main_container'>
-		<div class="flip_card">
-			<div class="front_card">
-				
-			</div>
-			<div class="back_card">
-				
-			</div>
+    <head>
+        <title>Slicebox - 3D Image Slider</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Slicebox - 3D Image Slider with Fallback" />
+        <meta name="keywords" content="jquery, css3, 3d, webkit, fallback, slider, css3, 3d transforms, slices, rotate, box, automatic" />
+		<meta name="author" content="Pedro Botelho for Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	</head>
+	<style>
+		img.icon-box {
+			position: absolute;
+			top: 75px;
+			left: 60px;
+		}
+		p.left-text {
+			position: absolute;
+			top: 74px;
+			left: 240px;
+			font-size: 31px;
+		}
+		.sb-description {
+			display: flex;
+			justify-content: space-around;
+		}
+		a.btn-stady, a.btn-buy_token {
+    background: #a5a5ef;
+    padding: 10px 25px;
+    border: 1px solid #6161af;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 0px 1px 1px black;
+    font-size: 18px;
+}
+a.btn-buy_token {
+background: #a5a5ef;
+border: 1px solid #6161af;
+}
+a.btn-buy_token {
+    background: #d2882b;
+    border: 1px solid #925003;
+}
+	</style>
+	<body>
+		<div class="container">
+
+			<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="#" target="_blank"><img src="images/mane.jpg" alt="image1"/></a>
+						<img class='icon-box' src="images/icon_movie_2.gif" alt=""> <p class="left-text">Все инструменты онлайн банкинга, трейдинга и бизнес интеграции в одном аккаунте.</p>
+						<div class="sb-description">
+							<a class='btn-stady' href="#">Начать Обучение</a>
+							<a class='btn-buy_token' href="#">Купить токен</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/mane.jpg" alt="image1"/></a>
+						<img class='icon-box' src="images/icon_movie_5.gif" alt=""> <p class="left-text">Работа с большинством известных процессинговых систем.</p>
+						<div class="sb-description">
+							<a class='btn-stady' href="#">Начать Обучение</a>
+							<a class='btn-buy_token' href="#">Купить токен</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/mane.jpg" alt="image1"/></a>
+						<img class='icon-box' src="images/movi-icon-4-main_2.gif" alt=""> <p class="left-text">Полная анонимность переводов при общедоступном мониторинге переводов.</p>
+						<div class="sb-description">
+							<a class='btn-stady' href="#">Начать Обучение</a>
+							<a class='btn-buy_token' href="#">Купить токен</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/mane.jpg" alt="image1"/></a>
+						<img class='icon-box' src="images/icon_movie_1.gif" alt=""> <p class="left-text">Обработка ордеров и транзакций в реальном времени.</p>
+						<div class="sb-description">
+							<a class='btn-stady' href="#">Начать Обучение</a>
+							<a class='btn-buy_token' href="#">Купить токен</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/mane.jpg" alt="image1"/></a>
+						<img class='icon-box' src="images/icon_movie_3.gif" alt=""> <p class="left-text">Моментальное начисление бонусов</p>
+						<div class="sb-description">
+							<a class='btn-stady' href="#">Начать Обучение</a>
+							<a class='btn-buy_token' href="#">Купить токен</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/mane.jpg" alt="image1"/></a>
+						<img class='icon-box' src="images/icon_movie_6.gif" alt=""> <p class="left-text">Персональная помощь по всем техническим и финансовым вопросам.</p>
+						<div class="sb-description">
+							<a class='btn-stady' href="#">Начать Обучение</a>
+							<a class='btn-buy_token' href="#">Купить токен</a>
+						</div>
+					</li>
+					
+				</ul>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+				<div id="nav-dots" class="nav-dots">
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+			</div><!-- /wrapper -->
+
 		</div>
-	</div>
-</body>
-</html>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$navDots = $( '#nav-dots' ).hide(),
+						$nav = $navDots.children( 'span' ),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$navDots.show();
+								$shadow.show();
+
+							},
+							onBeforeChange : function( pos ) {
+
+								$nav.removeClass( 'nav-dot-current' );
+								$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+							}
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+							$nav.each( function( i ) {
+							
+								$( this ).on( 'click', function( event ) {
+									
+									var $dot = $( this );
+									
+									if( !slicebox.isActive() ) {
+
+										$nav.removeClass( 'nav-dot-current' );
+										$dot.addClass( 'nav-dot-current' );
+									
+									}
+									
+									slicebox.jump( i + 1 );
+									return false;
+								
+								} );
+								
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+	</body>
+</html>	
